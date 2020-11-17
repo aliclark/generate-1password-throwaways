@@ -15,7 +15,7 @@ WV 26554
 
 304-534-7284
 
-11 / 04 / 1981
+1982-08-31
 
 Production cost estimator
 Lawn N Order Garden Care
