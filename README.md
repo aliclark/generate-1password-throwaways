@@ -1,6 +1,6 @@
 # Generate 1password throwaways
 
-Generates a CSV export containing rows of `Title, Username, Password, Notes`,
+Generates a CSV export containing rows of `Title`, `Username`, `Password`, `Notes`,
 which can be imported into a 1Password vault ready to use for a throwaway account.
 
 The logins rows also include a `Notes` field containing suggested values for: *full name*, *address*, *phone*, *birth date*, *occupation*, and *company*.
