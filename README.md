@@ -3,13 +3,14 @@
 Generates a CSV export containing rows of `Title`, `Username`, `Password`, `Notes`,
 which can be imported into a 1Password vault ready to use for a throwaway account.
 
-The logins rows also include a `Notes` field containing suggested values for: *full name*, *address*, *phone*, *birth date*, *occupation*, and *company*.
+The `Notes` field contains suggestions for *full name*, *address*, *phone*, *birth date*, *occupation*, and *company*.
 
 ## Prerequisites
 
-1. `data/identities` folder should contain 1 or more fake identities as created by https://www.fakenamegenerator.com/ eg. using https://fakeid.now.sh/
+1. The `data/identities` folder should contain any number of fake identities in `.json` files,
+2. as created by https://www.fakenamegenerator.com/ eg. using https://fakeid.now.sh/
 
-2. The command `ppg` should return a fresh password eg. by cloning https://github.com/aliclark/pragmatic-password-generator and creating a symlink `ppg` to `ppg.py` in the executable path
+3. The `ppg` command should return a fresh password, eg. by cloning https://github.com/aliclark/pragmatic-password-generator and creating a symlink `ppg` to `ppg.py` in the executable path
 
 ## Usage
 
@@ -28,4 +29,6 @@ optional arguments:
   --uk                  use United Kingdom formatting, eg. for dates
 ```
 
-The `birth-year` default is `1980`, `birth-year-variance` default is `2`, and `email-service` default is `gmail.com`.
+* The `birth-year` default is `1980`
+* The `birth-year-variance` default is `2`
+* The `email-service` default is `gmail.com`.
