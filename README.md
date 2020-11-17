@@ -48,4 +48,4 @@ optional arguments:
 
 * The `birth-year` default is `1980`
 * The `birth-year-variance` default is `2`
-* The `email-service` default is `gmail.com`.
+* The `email-service` default is `gmail.com`
