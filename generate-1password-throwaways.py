@@ -71,10 +71,10 @@ for fileName in glob('data/identities/*.json'):
         username = random.choice(adjectives) + random.choice(nouns)
         phone = details['Phone'].replace(' ', '')
 
-        writer.writerow([username,
-                        '{0}@{1}'.format(username, args.email_service),
-                        check_output(['ppg']).decode('utf-8').strip(),
-                        f"""{data['Name'].split(' ')[0]} {details['MothersMaidenName'][0]} {data['Name'].split(' ')[-1]}
+        writer.writerow([f'{hex(randint(0, 65535))[2:].zfill(4)} {username}',
+                         f'{username}@{args.email_service}',
+                         check_output(['ppg']).decode('utf-8').strip(),
+                         f"""{data['Name'].split(' ')[0]} {details['MothersMaidenName'][0]} {data['Name'].split(' ')[-1]}
 
 {data['Address'].split(', ')[0]}
 {data['Address'].split(', ')[1].title()}
