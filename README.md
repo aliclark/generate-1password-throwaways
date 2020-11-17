@@ -5,6 +5,23 @@ which can be imported into a 1Password vault ready to use for a throwaway accoun
 
 The `Notes` field contains suggestions for *full name*, *address*, *phone*, *birth date*, *occupation*, and *company*.
 
+```sh
+$ ./generate-1password-throwaways.py
+"protectivebutton","protectivebutton@gmail.com","Nrhjxbmxpwjuev8,","Hallie L Gracia
+
+2142 Columbia Mine Road
+Monongah
+WV 26554
+
+304-534-7284
+
+11 / 04 / 1981
+
+Production cost estimator
+Lawn N Order Garden Care
+"
+```
+
 ## Prerequisites
 
 1. The `data/identities` folder should contain any number of fake identities in `.json` files,
