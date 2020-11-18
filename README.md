@@ -32,8 +32,8 @@ Lawn N Order Garden Care
 ## Usage
 
 ```
-usage: generate-1password-throwaways.py [-h] [--birth-year year] [--birth-year-variance years] [--email-service domain] [--uk]
- 
+usage: generate-1password-throwaways.py [-h] [--birth-year year] [--birth-year-variance years] [--identities directory] [--uk]
+
 Generate throwaway logins for 1password.
 
 optional arguments:
@@ -41,11 +41,11 @@ optional arguments:
   --birth-year year     birth year, which will be rounded down to the nearest 5 years
   --birth-year-variance years
                         number of random years to add or remove from birth year
-  --email-service domain
-                        which domain to use for generated email addresses in the Notes field
+  --identities directory
+                        directory where the identity json files reside
   --uk                  use United Kingdom formatting, eg. for dates
 ```
 
 * The `birth-year` default is `1980`
 * The `birth-year-variance` default is `2`
-* The `email-service` default is `gmail.com`
+* The `identities` default is `data/identities`
