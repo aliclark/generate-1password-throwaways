@@ -6,8 +6,8 @@ which can be imported into a 1Password vault ready to use for a throwaway accoun
 The `Notes` field contains suggestions for *full name*, *address*, *phone*, *birth date*, *occupation*, and *company*.
 
 ```sh
-$ ./generate-1password-throwaways.py
-"protectivebutton","protectivebutton@gmail.com","Nrhjxbmxpwjuev8,","Hallie L Gracia
+$ ./generate-1password-throwaways.py --identities data/identities.test
+"vrmb untidyguitar","untidyguitar","Ljxfwcjrzijjql0-","Hallie L Gracia
 
 2142 Columbia Mine Road
 Monongah
@@ -15,7 +15,7 @@ WV 26554
 
 304-534-7284
 
-1982-08-31
+1981-05-23
 
 Production cost estimator
 Lawn N Order Garden Care

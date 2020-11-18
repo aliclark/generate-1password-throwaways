@@ -8,6 +8,7 @@ from datetime import datetime, date
 from calendar import isleap
 from random import randint
 import random
+from string import ascii_lowercase
 
 from sys import stdout
 from glob import glob
@@ -20,8 +21,8 @@ parser.add_argument('--birth-year', choices=range(1900, 2005), type=int, default
                     help='birth year, which will be rounded down to the nearest 5 years')
 parser.add_argument('--birth-year-variance', type=int, default=2, metavar='years',
                     help='number of random years to add or remove from birth year')
-parser.add_argument('--email-service', default='gmail.com', metavar='domain',
-                    help='which domain to use for generated email addresses in the Notes field')
+parser.add_argument('--identities', default='data/identities', metavar='directory',
+                    help='directory where the identity json files reside')
 parser.add_argument('--uk', action='store_true',
                     help='use United Kingdom formatting, eg. for dates')
 
@@ -59,7 +60,7 @@ with open('data/nouns.txt') as nounsFile:
 
 writer = csv.writer(stdout, quoting=csv.QUOTE_ALL)
 
-for fileName in glob('data/identities/*.json'):
+for fileName in glob(f'{args.identities}/*.json'):
 
     with open(fileName) as jsonfile:
         response = json.load(jsonfile)
@@ -71,8 +72,8 @@ for fileName in glob('data/identities/*.json'):
         username = random.choice(adjectives) + random.choice(nouns)
         phone = details['Phone'].replace(' ', '')
 
-        writer.writerow([f'{hex(randint(0, 65535))[2:].zfill(4)} {username}',
-                         f'{username}@{args.email_service}',
+        writer.writerow([f'{"".join([random.choice(ascii_lowercase) for _ in range(4)])} {username}',
+                         username,
                          check_output(['ppg']).decode('utf-8').strip(),
                          f"""{data['Name'].split(' ')[0]} {details['MothersMaidenName'][0]} {data['Name'].split(' ')[-1]}
 
